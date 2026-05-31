@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced CGPA Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <h1>🎓 Advanced CGPA Calculator</h1>
+    <p>Calculate your CGPA instantly for up to 8 semesters</p>
+
+    <label>Select Number of Semesters</label>
+
+    <select id="semesterCount">
+        <option value="">Choose</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+    </select>
+
+    <button onclick="generateInputs()">
+        Generate Fields
+    </button>
+
+    <div id="semesterInputs"></div>
+
+    <button onclick="calculateCGPA()">
+        Calculate CGPA
+    </button>
+
+    <div class="progress">
+        <div id="progressBar"></div>
+    </div>
+
+    <h2 id="cgpaResult">
+        CGPA: 0.00
+    </h2>
+
+    <h3 id="gradeResult"></h3>
+
+    <hr>
+
+    <h2>🎯 Target CGPA Planner</h2>
+
+    <input
+        type="number"
+        id="targetCGPA"
+        placeholder="Enter Target CGPA"
+        step="0.01"
+    >
+
+    <button onclick="calculateRequiredSGPA()">
+        Calculate Required SGPA
+    </button>
+
+    <h3 id="targetResult"></h3>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
